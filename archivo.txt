@@ -1,0 +1,17 @@
+int main() {
+    int x = 10;
+    float y = 2.5;
+
+    int count;
+    int letter = 1;
+
+    for (count = 0; count < x; count++) {
+        letter++;
+        y += count;
+    }
+
+    x = 5; 
+    print(x);
+    print(y);
+    print(letter);
+}
