@@ -1,132 +1,128 @@
-# **Pequeño Compilador en Java**
+# **Small Compiler in Java**
 
-## **Descripción**
+## **Description**
 
-Esta aplicación en Java permite realizar un análisis léxico, sintáctico y semántico de un código fuente en un lenguaje específico. El proyecto también incluye la capacidad de traducir el código a otro lenguaje en este caso a C y generar código intermedio. Esta herramienta es útil para la validación y traducción de código en un entorno de desarrollo.
+This Java application allows performing lexical, syntactic, and semantic analysis of source code in a specific language. The project also includes the ability to translate the code to another language, in this case, C, and generate intermediate code. This tool is useful for code validation and translation in a development environment.
 
-## **Características**
+## **Features**
 
-- **Análisis Léxico:** Identifica y clasifica los tokens del código fuente (por ejemplo, palabras clave, operadores, identificadores, etc.).
-- **Análisis Sintáctico:** Verifica la estructura gramatical del código y detecta errores de sintaxis.
-- **Análisis Semántico:** Verifica el uso adecuado de las variables y su tipo de datos, y detecta errores semánticos como el uso de variables no declaradas.
-- **Carga de Archivos:** Permite cargar archivos de código fuente desde el sistema de archivos local.
-- **Generación de Código Intermedio:** Después de un análisis exitoso, se genera código intermedio que puede ser ejecutado.
-- **Ejecutar Código:** Si no se encuentran errores, se habilita la opción de ejecutar el código traducido.
+- **Lexical Analysis:** Identifies and classifies tokens in the source code (e.g., keywords, operators, identifiers, etc.).
+- **Syntactic Analysis:** Verifies the grammatical structure of the code and detects syntax errors.
+- **Semantic Analysis:** Verifies the proper use of variables and their data types, and detects semantic errors such as the use of undeclared variables.
+- **File Loading:** Allows loading source code files from the local file system.
+- **Intermediate Code Generation:** After successful analysis, intermediate code is generated that can be executed.
+- **Execute Code:** If no errors are found, the option to execute the translated code is enabled.
 
-## **Requisitos**
+## **Requirements**
 
-- **JDK 21 o superior** para compilar y ejecutar el código.
-- **IDE recomendada:** NetBeans para trabajar con el proyecto.
-- **Librerías adicionales:** 
-  - JFlex y CUP para el análisis léxico y sintáctico.
-  - Java Swing para la interfaz gráfica de usuario.
+- **JDK 21 or higher** to compile and run the code.
+- **Recommended IDE:** NetBeans to work with the project.
+- **Additional libraries:**
+  - JFlex and CUP for lexical and syntactic analysis.
+  - Java Swing for the graphical user interface.
 
-## **Instalación**
+## **Installation**
 
-1. **Clonar el repositorio o descargar los archivos del proyecto:**
-   - Si aún no tienes el repositorio, clónalo usando Git:
+1. **Clone the repository or download the project files:**
+   - If you don't have the repository, clone it using Git:
      ```bash
      git clone https://github.com/BrayanML/Compiler.git
      ```
 
-2. **Abrir el proyecto en tu IDE:**
-   - Importa el proyecto en tu IDE favorito (por ejemplo, NetBeans).
-   - Asegúrate de tener configurado el JDK en tu entorno de desarrollo.
+2. **Open the project in your IDE:**
+   - Import the project into your favorite IDE (e.g., NetBeans).
+   - Make sure the JDK is configured in your development environment.
 
-3. **Compilar el proyecto:**
-   - Una vez importado, compila el proyecto para asegurarte de que todas las dependencias estén resueltas.
+3. **Compile the project:**
+   - Once imported, compile the project to ensure all dependencies are resolved.
 
-## **Uso**
+## **Usage**
 
-### **Interfaz Gráfica de Usuario (GUI)**
+### **Graphical User Interface (GUI)**
 
-La aplicación cuenta con una interfaz gráfica basada en Java Swing. Las siguientes acciones están disponibles:
+The application has a Java Swing-based graphical interface. The following actions are available:
 
-1. **Abrir archivo:** Permite cargar un archivo de código fuente desde el sistema de archivos local.
-2. **Limpiar campos:** Borra el contenido de los campos de entrada y resultados.
-3. **Análisis Léxico:** Realiza el análisis léxico del código cargado, mostrando los tokens encontrados.
-4. **Análisis Sintáctico:** Realiza el análisis sintáctico para verificar si el código cumple con la gramática definida.
-5. **Análisis Semántico:** Realiza un análisis semántico para verificar la consistencia del código, como la correcta declaración de variables.
-6. **Ejecutar Código:** Si el código ha sido traducido correctamente, permite ejecutar el código intermedio generado.
+1. **Open File:** Allows loading a source code file from the local file system.
+2. **Clear Fields:** Clears the contents of the input and result fields.
+3. **Lexical Analysis:** Performs lexical analysis of the loaded code, showing the tokens found.
+4. **Syntactic Analysis:** Performs syntactic analysis to verify that the code adheres to the defined grammar.
+5. **Semantic Analysis:** Performs semantic analysis to verify the consistency of the code, such as correct variable declarations.
+6. **Execute Code:** If the code has been successfully translated, it allows executing the generated intermediate code.
 
-### **Pasos para realizar un análisis:**
+### **Steps to Perform an Analysis:**
 
-1. **Abrir archivo:** Carga un archivo de código fuente (por ejemplo, `.txt`).
-2. **Realizar Análisis:**
-   - **Análisis Léxico:** Analiza los tokens del código fuente.
-   - **Análisis Sintáctico:** Verifica que la estructura gramatical del código sea válida.
-   - **Análisis Semántico:** Verifica la validez de las declaraciones de variables y su uso.
-3. **Generación de Código Intermedio:** Si no se detectan errores, se genera el código intermedio.
-4. **Ejecutar el Código:** Si se ha generado un código intermedio válido, puedes ejecutarlo.
+1. **Open File:** Load a source code file (e.g., `.txt`).
+2. **Perform Analysis:**
+   - **Lexical Analysis:** Analyzes the tokens in the source code.
+   - **Syntactic Analysis:** Verifies that the grammatical structure of the code is valid.
+   - **Semantic Analysis:** Verifies the validity of variable declarations and their use.
+3. **Generate Intermediate Code:** If no errors are detected, the intermediate code is generated.
+4. **Execute Code:** If valid intermediate code is generated, you can execute it.
 
-### **Botones de la interfaz:**
-- **Abrir archivo:** Abre un archivo de código fuente.
-- **Limpiar:** Borra los campos de texto de entrada y resultados.
-- **Análisis Léxico:** Muestra los resultados del análisis léxico.
-- **Análisis Sintáctico:** Muestra los resultados del análisis sintáctico.
-- **Análisis Semántico:** Muestra los resultados del análisis semántico.
-- **Traducir:** Traduce el código a un formato intermedio.
-- **Ejecutar:** Ejecuta el código intermedio generado.
+### **Interface Buttons:**
+- **Open File:** Opens a source code file.
+- **Clear:** Clears the input and result text fields.
+- **Lexical Analysis:** Shows the results of lexical analysis.
+- **Syntactic Analysis:** Shows the results of syntactic analysis.
+- **Semantic Analysis:** Shows the results of semantic analysis.
+- **Translate:** Translates the code into an intermediate format.
+- **Execute:** Executes the generated intermediate code.
 
-## **Código Intermedio**
+## **Intermediate Code**
 
-La aplicación genera un código intermedio. Esta es una representación más abstracta que puede ser interpretada o compilada para ejecutarse en una máquina.
+The application generates intermediate code. This is a more abstract representation that can be interpreted or compiled to run on a machine.
 
-## **Manejo de Errores**
+## **Error Handling**
 
-- Si se detecta un error durante cualquiera de los análisis (léxico, sintáctico o semántico), el sistema mostrará un mensaje en la interfaz gráfica indicando el tipo de error y la línea donde ocurrió.
-- Si el código es válido, el sistema generará el código intermedio y estará listo para ser ejecutado.
+- If an error is detected during any of the analyses (lexical, syntactic, or semantic), the system will display a message in the graphical interface indicating the error type and the line where it occurred.
+- If the code is valid, the system will generate the intermediate code and it will be ready for execution.
 
-## **Ejemplo de Uso**
+## **Example Usage**
 
-1. Abre un archivo de código fuente:
-   - Usa el botón **Abrir archivo** para seleccionar un archivo de código desde tu computadora.
+1. Open a source code file:
+   - Use the **Open File** button to select a source code file from your computer.
    
-2. Realiza el análisis:
-   - Haz clic en **Análisis Léxico**, **Análisis Sintáctico**, y **Análisis Semántico** para verificar el código.
+2. Perform the analysis:
+   - Click **Lexical Analysis**, **Syntactic Analysis**, and **Semantic Analysis** to validate the code.
 
-3. Traduce el código:
-   - Si no se detectan errores, se genera el código intermedio.
+3. Translate the code:
+   - If no errors are detected, the intermediate code will be generated.
 
-4. Ejecuta el código:
-   - Haz clic en **Ejecutar** para ejecutar el código generado.
+4. Execute the code:
+   - Click **Execute** to run the generated code.
 
-## **Errores Comunes**
+## **Common Errors**
 
-- **Error de sintaxis:** Puede ocurrir si el código no sigue las reglas del lenguaje. Asegúrate de que el código esté bien formado y cumpla con la gramática definida.
-- **Error semántico:** Ocurre cuando una variable se usa sin ser declarada o se asigna un valor de un tipo incorrecto.
+- **Syntax Error:** This may occur if the code does not follow the language's rules. Ensure the code is well-formed and adheres to the defined grammar.
+- **Semantic Error:** Occurs when a variable is used without being declared or a value of an incorrect type is assigned.
 
-## **Contribuciones**
+## **Contributions**
 
-Si deseas contribuir al proyecto, por favor sigue estos pasos:
+If you would like to contribute to the project, please follow these steps:
 
-1. Haz un fork del proyecto.
-2. Crea una nueva rama (`git checkout -b feature-nueva-caracteristica`).
-3. Realiza los cambios y haz un commit (`git commit -am 'Añadir nueva característica'`).
-4. Haz push a la rama (`git push -u origin feature-nueva-caracteristica`).
-5. Crea un pull request en el repositorio principal.
+1. Fork the project.
+2. Create a new branch (`git checkout -b feature-new-feature`).
+3. Make your changes and commit them (`git commit -am 'Add new feature'`).
+4. Push to the branch (`git push -u origin feature-new-feature`).
+5. Create a pull request on the main repository.
 
-## **Código de Prueba**
+## **Sample Code**
 
-   ```bash
-    int main() {
-      int x = 10;
-      float y = 2.5;
-  
-      int count;
-      int letter = 1;
-  
-      for (count = 0; count < x; count++) {
-          letter++;
-          y += count;
-      }
-  
-      x = 5; 
-      print(x);
-      print(y);
-      print(letter);
+```bash
+int main() {
+  int x = 10;
+  float y = 2.5;
+
+  int count;
+  int letter = 1;
+
+  for (count = 0; count < x; count++) {
+      letter++;
+      y += count;
   }
-   ```
 
-
-
+  x = 5; 
+  print(x);
+  print(y);
+  print(letter);
+}
